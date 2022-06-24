@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const morgan = require('morgan');
 const { db, Story, User } = require('./db');
 const app = express();
@@ -10,9 +9,6 @@ app.use(morgan('dev'));
 
 // Body parsing middleware
 app.use(express.json());
-
-// Static middleware
-app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/api/users', async (req, res, next) => {
   try {
