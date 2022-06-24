@@ -1,6 +1,5 @@
 const { faker } = require('@faker-js/faker');
 
-
 const USERS = [];
 const STORIES = [];
 
@@ -16,7 +15,7 @@ function createRandomStory(){
         title: faker.random.words(),
         body: faker.lorem.paragraphs(5),
         favorite: faker.datatype.boolean(),
-        authorUserId: faker.random.numeric(2)
+        authorUserId: Math.floor(Math.random() * 101)
     }
 }
 

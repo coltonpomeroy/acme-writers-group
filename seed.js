@@ -10,12 +10,6 @@ const { USERS, STORIES } = require("./seed-data");
 
 (async function seedDatabase() {
     try {
-    //   await db.sync({ force: true });
-    //   await Promise.all(seedData.map((contact) => Contact.create(contact)));
-    //   console.log(`
-    //     Seed success!
-    //   `);
-
     //DROP DATABASE IF IT EXISTS
     await pgtools.dropdb(config, 'acme-writers-group', function (err, res){
        if(err && err.name && err.name !== 'invalid_catalog_name'){
